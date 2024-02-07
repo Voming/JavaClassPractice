@@ -26,16 +26,16 @@ public class ShapeMenu {
 			System.out.println("9. 프로그램 종료");
 			System.out.print("메뉴 번호 :");
 			int menu = sc.nextInt();
-			
+
 			if (menu == 9) {
 				System.out.println("종료");
-				break;
+				break; // while문 벗어남
 			} else {
 				switch (menu) {
 				case 3:
 					falutCount = 0;
 					triangleMenu();
-					break;
+					break; // switch문 벗어남
 				case 4:
 					falutCount = 0;
 					squareMenu();
@@ -45,8 +45,8 @@ public class ShapeMenu {
 					System.out.println("잘못된 번호입니다. 다시 입력해주세요.");
 					break;
 				}
-				
-				if(falutCount > 5) {
+
+				if (falutCount > 5) {
 					System.out.println("방법을 다시 확인해주세요.");
 					falutCount = 0;
 					break;
@@ -71,6 +71,8 @@ public class ShapeMenu {
 			System.out.println("9. 메인으로");
 			System.out.print("메뉴 번호 :");
 
+			boolean exit = false;
+
 			int menu = sc.nextInt();
 			switch (menu) {
 			case 1:
@@ -84,10 +86,15 @@ public class ShapeMenu {
 				break;
 			case 9:
 				System.out.println("메인으로 돌아갑니다.");
-				inputMenu();
-				break;
+				// 안됨!! stack이 이상하게 쌓임 inputMenu();
+				exit = true;
+				break; // switch 문 벗어남
 			default:
 				System.out.println("잘못된 번호입니다. 다시 입력해주세요.");
+				break;
+			}
+
+			if (exit) { // while문 벗어나면 자동으로 inputMenu()로 돌아감
 				break;
 			}
 		}
@@ -100,6 +107,7 @@ public class ShapeMenu {
 		 * ==> inputSize() 4. 사각형 정보 ==> printInformation() 9. 메인으로 ==> “메인으로 돌아갑니다.” 출력
 		 * 후 inputMenu()로 메뉴 번호 : 잘못 입력했을 시 “잘못된 번호입니다. 다시 입력해주세요.” 출력 후 반복
 		 */
+
 		while (true) { // 반드시 break가 필요
 			System.out.println("===== 삼각형 =====");
 			System.out.println("1. 사각형 둘레");
@@ -108,6 +116,8 @@ public class ShapeMenu {
 			System.out.println("4. 사각형 정보");
 			System.out.println("9. 메인으로");
 			System.out.print("메뉴 번호 :");
+
+			boolean exit = false;
 
 			int menu = sc.nextInt();
 			switch (menu) {
@@ -126,11 +136,15 @@ public class ShapeMenu {
 				break;
 			case 9:
 				System.out.println("메인으로 돌아갑니다.");
-				inputMenu();
-				break;
+				// 안됨!! stack이 이상하게 쌓임 inputMenu();
+				break; // switch 문 벗어남
 			default:
 				System.out.println("잘못된 번호입니다. 다시 입력해주세요.");
 				break;
+			}
+
+			if (exit) {
+				break; // while문 벗어나면 자동으로 inputMenu()로 돌아감
 			}
 		}
 	}
