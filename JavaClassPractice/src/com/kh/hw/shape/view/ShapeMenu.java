@@ -90,9 +90,6 @@ public class ShapeMenu {
 				System.out.println("잘못된 번호입니다. 다시 입력해주세요.");
 				break;
 			}
-			if (menu == 9) {
-				break; // while문 break
-			}
 		}
 	}
 
@@ -113,7 +110,7 @@ public class ShapeMenu {
 			System.out.print("메뉴 번호 :");
 
 			int menu = sc.nextInt();
-			switch (sc.nextInt()) {
+			switch (menu) {
 			case 1:
 				inputSize(4, 1);
 				break;
@@ -135,10 +132,6 @@ public class ShapeMenu {
 				System.out.println("잘못된 번호입니다. 다시 입력해주세요.");
 				break;
 			}
-			if (menu == 9) {
-				break; // while문 break
-			}
-
 		}
 	}
 
