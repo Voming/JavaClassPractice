@@ -19,7 +19,7 @@ public class Shape {
 
 	//@Override
 	public String information() {
-		return "Shape [height=" + height + ", width=" + width + ", color=" + color + "]";
+		return "[height=" + height + ", width=" + width + ", color=" + color + "]";
 	}
 
 	public int getType() {

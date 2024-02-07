@@ -11,7 +11,7 @@ public class TriangleController {
 		 */
 		s.setHeight(height);
 		s.setWidth(width);
-		return height*width /2 ;
+		return height * width / 2;
 	}
 
 	public void paintColor(String color) {
