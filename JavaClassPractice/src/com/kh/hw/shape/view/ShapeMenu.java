@@ -17,27 +17,38 @@ public class ShapeMenu {
 		 * 종료 => “프로그램 종료” 출력 후 프로그램 종료 메뉴 번호 : 잘못 입력했을 시 “잘못된 번호입니다. 다시 입력해주세요.” 출력 후
 		 * 반복
 		 */
-		System.out.println("===== 도형 프로그램 =====");
-		System.out.println("3. 삼각형");
-		System.out.println("4. 사각형");
-		System.out.println("9. 프로그램 종료");
-		System.out.print("메뉴 번호 :");
-		int menu = sc.nextInt();
+		int falutCount = 0;
 
 		while (true) { // 반드시 break가 필요
+			System.out.println("===== 도형 프로그램 =====");
+			System.out.println("3. 삼각형");
+			System.out.println("4. 사각형");
+			System.out.println("9. 프로그램 종료");
+			System.out.print("메뉴 번호 :");
+			int menu = sc.nextInt();
+			
 			if (menu == 9) {
 				System.out.println("종료");
 				break;
 			} else {
 				switch (menu) {
 				case 3:
+					falutCount = 0;
 					triangleMenu();
 					break;
 				case 4:
+					falutCount = 0;
 					squareMenu();
 					break;
 				default:
+					falutCount++;
 					System.out.println("잘못된 번호입니다. 다시 입력해주세요.");
+					break;
+				}
+				
+				if(falutCount > 5) {
+					System.out.println("방법을 다시 확인해주세요.");
+					falutCount = 0;
 					break;
 				}
 			}
