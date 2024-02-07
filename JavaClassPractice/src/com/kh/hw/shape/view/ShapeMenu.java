@@ -87,7 +87,7 @@ public class ShapeMenu {
 				break;
 			case "9":
 				System.out.println("메인으로 돌아갑니다.");
-				// 안됨!! stack이 이상하게 쌓임 inputMenu();
+				// inputMenu(); 안됨!! stack이 이상하게 쌓임
 				exit = true;
 				break; // switch 문 벗어남
 			default:
@@ -138,7 +138,7 @@ public class ShapeMenu {
 			case "9":
 				System.out.println("메인으로 돌아갑니다.");
 				exit = true;
-				// 안됨!! stack이 이상하게 쌓임 inputMenu();
+				// inputMenu(); 안됨!! stack이 이상하게 쌓임
 				break; // switch 문 벗어남
 			default:
 				System.out.println("잘못된 번호입니다. 다시 입력해주세요.");
@@ -164,7 +164,7 @@ public class ShapeMenu {
 			switch (menuNum) {
 			case 1:
 				System.out.print("높이 : ");
-				height = sc.nextLine(); // 하지만, nextLine() 을 사용해야 오류가 덜 발생함
+				height = sc.nextLine();
 				System.out.print("너비 : ");
 				width = sc.nextLine();
 				dh = Double.parseDouble(height);

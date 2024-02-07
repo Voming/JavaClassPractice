@@ -11,6 +11,7 @@ public class SquareController {
 		 */
 		s.setHeight(height);
 		s.setWidth(width);
+		//s = new Shape(height, width);로하면 null 오류발생
 		return width * 2 + height * 2;
 	}
 
