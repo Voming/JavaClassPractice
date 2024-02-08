@@ -41,7 +41,7 @@ public class EmployeeController {
 
 	//객체를 삭제하는 메소드
 	public Employee remove() {
-		e = new Employee();
+		e = new Employee();   //비어있는 객체를 새로 만들어서 지워줌
 		return  e;
 	}
 
