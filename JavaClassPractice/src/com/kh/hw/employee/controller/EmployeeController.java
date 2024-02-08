@@ -4,6 +4,8 @@ import com.kh.hw.employee.model.vo.Employee;
 
 public class EmployeeController {
 	private Employee e = new Employee();
+	Employee[] arrE = new Employee[10];
+	private static int maxEmployee = 10;   //배열 추가할때마다 하나씩 뺴줌 // 수정이랑 추가 같은쪽에 처리를 해줘야함
 
 	//매개변수 있는 생성자를 이용하여 데이터 저장하는 메소드
 	public void add(int empNo, String name, char gender, String phone) {
