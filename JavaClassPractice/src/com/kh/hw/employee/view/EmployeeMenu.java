@@ -16,7 +16,7 @@ public class EmployeeMenu {
 			System.out.println("3. 사원 삭제");
 			System.out.println("4. 사원 출력");
 			System.out.println("9. 프로그램 종료");
-			System.out.println("메뉴 번호를 누르세요 :");
+			System.out.print("메뉴 번호를 누르세요 :");
 
 			String menu = sc.nextLine();
 
@@ -52,14 +52,14 @@ public class EmployeeMenu {
 		String empNo = sc.nextLine();
 		int iempNo = Integer.parseInt(empNo);
 
-		System.out.print("사원 이름 :");
+		System.out.print("사원 이름 : ");
 		String name = sc.nextLine();
 
-		System.out.print("사원 성별 :");
+		System.out.print("사원 성별 : ");
 		String gender = sc.nextLine();
 		char cgender = gender.charAt(0);
 
-		System.out.print("전화 번호 :");
+		System.out.print("전화 번호 : ");
 		String phone = sc.nextLine();
 
 		System.out.print("추가 정보를 더 입력하시겠습니까?(y/n) : ");
@@ -69,11 +69,11 @@ public class EmployeeMenu {
 			System.out.print("사원 부서 : ");
 			String dept = sc.nextLine();
 
-			System.out.print("사원 연봉 :");
+			System.out.print("사원 연봉 : ");
 			String salary = sc.nextLine();
 			int isalary = Integer.parseInt(salary);
 
-			System.out.print("보너스 율 :");
+			System.out.print("보너스 율 : ");
 			String bonus = sc.nextLine();
 			double dbonus = Double.parseDouble(bonus);
 
@@ -91,7 +91,7 @@ public class EmployeeMenu {
 		System.out.println("2. 사원 연봉");
 		System.out.println("3. 보너스 율");
 		System.out.println("9. 메인메뉴 이동");
-		System.out.println("메뉴 번호를 누르세요 :");
+		System.out.print("메뉴 번호를 누르세요 : ");
 
 		String menu = sc.nextLine();
 		
@@ -107,7 +107,7 @@ public class EmployeeMenu {
 			int isalary = Integer.parseInt(salary);
 			ec.modify(isalary);
 			break;
-		case "4":
+		case "3":
 			System.out.print("수정할 보너스 율 : ");
 			String bonus = sc.nextLine();
 			double dbonus = Double.parseDouble(bonus);
@@ -125,7 +125,7 @@ public class EmployeeMenu {
 
 	// 데이터 삭제하는 메소드
 	public void deleteEmp() {
-		System.out.print("정말 삭제하시겠습니까? (y/n) :");
+		System.out.print("정말 삭제하시겠습니까? (y/n) : ");
 	
 		String pick = sc.nextLine();
 

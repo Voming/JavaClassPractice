@@ -41,7 +41,8 @@ public class EmployeeController {
 
 	//객체를 삭제하는 메소드
 	public Employee remove() {
-		return new Employee();
+		e = new Employee();
+		return  e;
 	}
 
 	//객체에 저장된 데이터를 가져와 반환하는 메소드
