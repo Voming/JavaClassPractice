@@ -3,6 +3,7 @@ package com.kh.practice.list.library.view;
 import java.util.Scanner;
 
 import com.kh.practice.list.library.controller.BookController;
+import com.kh.practice.list.library.model.vo.Book;
 
 public class BookMenu {
 	private Scanner sc = new Scanner(System.in);
@@ -90,28 +91,42 @@ public class BookMenu {
 			break;
 		}
 		
-		bc.insertBook(titile, author, tCate, price);
-		bc.insertBookList();
+		bc.insertBook(new Book(titile, author, tCate, price));
 	}
 
 	// 전체 도서 목록 출력 성공을 알리는 메소드
 	public void selectList() {
 		System.out.println("===== 도서 전체 조회 =====");
-		System.out.println(bc.selectList());
+		for(int i = 0; i < bc.selectList().size() ; i++) {
+			System.out.println(bc.selectList().get(i));
+		}
 	}
 
 	// 특정 도서 검색 결과를 보여주는 메소드
 	public void searchBook() {
-
+		System.out.println("===== 도서 검색 =====");
+		System.out.print("검색 키워드 :");
+		String keyword = sc.nextLine();
+		System.out.println(bc.searchBook(keyword));
 	}
 
 	// 특정 도서 삭제 성공을 알리는 메소드
 	public void deleteBook() {
-
+		System.out.println("===== 도서 삭제 =====");
+		System.out.print("삭제할 도서 명 :");
+		String title = sc.nextLine();
+		System.out.print("삭제할 저자 명 :");
+		String author = sc.nextLine();
+		if(bc.deleteBook(title, author)) {
+			System.out.println("성공적으로 삭제되었습니다.");
+		}else {
+			System.out.println("삭제 오류");
+		}
 	}
 
 	// 책 명 오름차순 정렬 성공을 알리는 메소드
 	public void ascBook() {
-
+		bc.ascBook();
+		System.out.println("정렬에 성공하였습니다.");
 	}
 }
