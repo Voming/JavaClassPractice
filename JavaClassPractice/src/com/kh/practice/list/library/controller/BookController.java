@@ -49,6 +49,7 @@ public class BookController  {
 
 	// 책 명 오름차순 정렬하는 메소드
 	public void ascBook() {
+		//Collections.sort(list); 아래와 동일
 		for(int i = 0; i < list.size()-1 ; i++) {
 			for(int j = 0; j <list.size()-1 -i; j++);
 			Book haveBook = list.get(i);
